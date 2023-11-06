@@ -16,6 +16,9 @@ namespace BaDaPrFin
         public FrmLoadingScreen()
         {
             InitializeComponent();
+            Bitmap img = new Bitmap(Application.StartupPath + @"\img\Fondo7.jpg");
+            this.BackgroundImage = img;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
             tmrTemporizador.Start();
         }
 

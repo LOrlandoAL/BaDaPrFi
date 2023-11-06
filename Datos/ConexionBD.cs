@@ -26,7 +26,7 @@ namespace Datos
 
                 conexion = new MySqlConnection();
                 conexion.ConnectionString = "server=" + Properties.Settings.Default.Host + ";uid="
-                    + Properties.Settings.Default.Usuario + ";pwd=" + Properties.Settings.Default.Contrasena + "; database=Datos";
+                    + Properties.Settings.Default.Usuario + ";pwd=" + Properties.Settings.Default.Contrasena + "; database=prfinal";
                 conexion.Open();
                 return true;
             }

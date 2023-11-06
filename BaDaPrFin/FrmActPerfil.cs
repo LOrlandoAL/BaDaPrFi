@@ -15,11 +15,51 @@ namespace BaDaPrFin
         public FrmActPerfil()
         {
             InitializeComponent();
+            Bitmap img = new Bitmap(Application.StartupPath + @"\img\Fondo4.jpg");
+            this.BackgroundImage = img;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
         private void Salir(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            /*FrmMenu menu = new FrmMenu();
+            menu.Show(this);
+            this.Hide();*/
+        }
+
+        private void FrmActPerfil_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblContrasena_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNombre_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblApellidoPaterno_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

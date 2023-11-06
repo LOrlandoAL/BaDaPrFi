@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\BaDaPrFin",
+    "\\BaDaPrFin\\Properties",
+    "\\Datos"
   ],
-  "SelectedNode": "\\C:\\Users\\LuisY\\Source\\Repos\\BaDaPrFi",
+  "SelectedNode": "\\BaDaPrFin\\Properties\\Resources.resx",
   "PreviewInSolutionExplorer": false
 }
