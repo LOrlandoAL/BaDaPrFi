@@ -43,7 +43,7 @@ namespace BaDaPrFin
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            FrmActPerfil actPerfil = new FrmActPerfil();
+            FrmActPerfil actPerfil = new FrmActPerfil(Usu);
             actPerfil.Show();
             this.Hide();
         }

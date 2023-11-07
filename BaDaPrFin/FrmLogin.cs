@@ -33,19 +33,23 @@ namespace BaDaPrFin
             txtUsuario.Text.Trim();
             txtContrasena.Text.Trim();
 
-            if (txtUsuario.Text.Equals("") || txtContrasena.Text.Equals(""))
+            UsuariosDAO Dao = new UsuariosDAO();
+            Model_Usuarios Usu = Dao.login(txtUsuario.Text, txtContrasena.Text);
+            Model_Usuarios Datos;
+
+            if (Usu==null)
             {
-                MessageBox.Show("Something going wrong.");
+                MessageBox.Show("Usuario y/o Contraseña Invalidos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
-                UsuariosDAO Dao = new UsuariosDAO();
-                Model_Usuarios Usu = Dao.login(txtUsuario.Text,txtContrasena.Text);
-                Model_Usuarios Datos = Dao.ObtenerTodo(Usu.ID);
+                 Dao = new UsuariosDAO();
+                 Usu = Dao.login(txtUsuario.Text,txtContrasena.Text);
+                 Datos = Dao.ObtenerTodo(Usu.ID);
 
                 if (Usu != null)
                 {
-                    MessageBox.Show("Bienvenid@" + Usu.Nombre);
+                    MessageBox.Show("Bienvenid@ " + Usu.Nombre);
                     FrmMenu Menu = new FrmMenu(Datos);
                     Menu.Show();
                     this.Hide();
@@ -76,6 +80,33 @@ namespace BaDaPrFin
         private void lblusu_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == 39 || e.KeyChar == 34 || e.KeyChar == 94 || 
+               e.KeyChar == 96 || e.KeyChar == 126)
+            {
+                MessageBox.Show("Caracter invalido", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtContrasena_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 39 || e.KeyChar == 34 || e.KeyChar == 94 ||
+               e.KeyChar == 96 || e.KeyChar == 126)
+            {
+                MessageBox.Show("Caracter invalido", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
         }
     }
 }

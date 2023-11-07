@@ -3,8 +3,9 @@
     "",
     "\\BaDaPrFin",
     "\\BaDaPrFin\\Properties",
-    "\\Datos"
+    "\\Datos",
+    "\\Modelos"
   ],
-  "SelectedNode": "\\BaDaPrFin\\Properties\\Resources.resx",
+  "SelectedNode": "\\Datos\\UsuariosDAO.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -58,6 +58,8 @@
             this.txtUsuario.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtUsuario.Size = new System.Drawing.Size(346, 21);
             this.txtUsuario.TabIndex = 7;
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
+            this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             // 
             // label2
             // 
@@ -86,6 +88,7 @@
             this.txtContrasena.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtContrasena.Size = new System.Drawing.Size(346, 21);
             this.txtContrasena.TabIndex = 8;
+            this.txtContrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContrasena_KeyPress);
             // 
             // lblusu
             // 
